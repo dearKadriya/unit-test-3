@@ -8,13 +8,13 @@ beforeEach(() => {
 });
 
 test('test getLevel raw ', () => {
-  fetchData.mockReturnValue({ response: { level: 1 } });
+  fetchData.mockReturnValue({ status: 'ok', level: 1 });
   getLevel(1);
   expect(fetchData).toBeCalledWith('https://server/user/1');
 });
 
 test('fetchData called only once', () => {
-  fetchData.mockReturnValue({ response: { level: 1 } });
+  fetchData.mockReturnValue({ status: 'ok', level: 1 });
   getLevel(1);
   expect(fetchData).toBeCalledTimes(1);
 });
