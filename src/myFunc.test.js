@@ -26,7 +26,7 @@ test('check getLevel return with status ok', () => {
 });
 
 test('check getLevel return when status not ok', () => {
-  fetchData.mockReturnValue({status: 'not ok', level: 1});
+  fetchData.mockReturnValue({ status: 'not ok', level: 1 });
   const result = getLevel(1);
   expect(result).toEqual('Информация об уровне временно недоступна');
-} )
+});
