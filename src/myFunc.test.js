@@ -19,7 +19,7 @@ test('fetchData called only once', () => {
   expect(fetchData).toBeCalledTimes(1);
 });
 
-test('getLevel respons', () => {
+test('check getLevel return', () => {
   fetchData.mockReturnValue({ status: 'ok', level: 1 });
   const result = getLevel(1);
   expect(result).toEqual('Ваш текущий уровень: 1');
